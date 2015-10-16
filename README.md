@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/rickselby/consthelpers.svg?branch=master)](https://travis-ci.org/rickselby/consthelpers)
+[![Coverage Status](https://coveralls.io/repos/rickselby/consthelpers/badge.svg?branch=master&service=github)](https://coveralls.io/github/rickselby/consthelpers?branch=master)
 
 Helper traits to use when using a class with many constants.
 
