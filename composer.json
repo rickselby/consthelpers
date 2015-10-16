@@ -1,0 +1,27 @@
+{
+    "name": "rickselby/consthelpers",
+    "type": "library",
+    "description": "",
+    "keywords": ["constants"],
+    "homepage": "https://github.com/rickselby/consthelpers",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rick Selby",
+            "email": "rick@selby-family.co.uk",
+            "homepage": "https://github.com/rickselby",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ConstHelpers\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": { "ConstHelpers\\Tests\\": "tests/" }
+    }
+}
