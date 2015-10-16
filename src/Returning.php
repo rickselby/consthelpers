@@ -7,7 +7,7 @@ namespace ConstHelpers;
  */
 trait Returning
 {
-    /** @var mixed[] Cached array of constants **/
+    /** @var array Cached array of constants **/
     private static $constList;
 
     /**
