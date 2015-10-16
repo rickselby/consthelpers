@@ -23,7 +23,6 @@ class ReturningTest extends \PHPUnit_Framework_TestCase
         );
     }
 
-
     /**
      * @depends testGetAll
      *
@@ -90,5 +89,4 @@ class ReturningTest extends \PHPUnit_Framework_TestCase
             ['X', []],
         ];
     }
-
 }

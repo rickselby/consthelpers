@@ -51,5 +51,4 @@ class ValidatingTest extends \PHPUnit_Framework_TestCase
             [Examples\Validating::POINT_SOUTH, 'X', false],
         ];
     }
-
 }

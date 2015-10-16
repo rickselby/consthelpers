@@ -3,7 +3,7 @@
 namespace ConstHelpers;
 
 /**
- * Functions for getting lists of constants based on regular expressions
+ * Functions for getting lists of constants based on regular expressions.
  */
 trait Returning
 {
@@ -11,7 +11,7 @@ trait Returning
     private static $constList;
 
     /**
-     * Get all constants in the class
+     * Get all constants in the class.
      *
      * @return mixed[] Array of constant values, keyed by name
      */
@@ -53,7 +53,7 @@ trait Returning
     }
 
     /**
-     * Populate the list of constants, if required, and return the list
+     * Populate the list of constants, if required, and return the list.
      *
      * @return mixed[] Array of all constants, keyed by name
      */
@@ -62,6 +62,7 @@ trait Returning
         if (!isset(self::$constList)) {
             self::$constList = (new \ReflectionClass(get_called_class()))->getConstants();
         }
+
         return self::$constList;
     }
 }
