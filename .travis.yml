@@ -9,5 +9,14 @@ matrix:
     allow_failures:
         - php: 7.0
 
+install:
+    - composer require satooshi/php-coveralls:~0.6@stable
+
 before_script:
-    - composer install
+    - mkdir -p build/logs
+
+script:
+    - phpunit --coverage-clover build/logs/clover.xml
+
+after_success:
+    - php vendor/bin/coveralls -v
