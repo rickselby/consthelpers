@@ -17,9 +17,13 @@ trait Validating
      *
      * @return bool
      */
-    public static function isValid($value, $regexp)
+    public static function isValid($value, $regexp = null)
     {
-        return in_array($value, self::getRegexp($regexp));
+        if ($regexp !== null) {
+            return in_array($value, self::getRegexp($regexp));
+        } else {
+            return in_array($value, self::getAll());
+        }
     }
 
     /**

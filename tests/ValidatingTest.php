@@ -27,6 +27,8 @@ class ValidatingTest extends \PHPUnit_Framework_TestCase
             [Examples\Validating::POINT_EAST, '/I.*S/', true],
             [Examples\Validating::ORIENT_NORMAL, '/I.*S/', false],
             [Examples\Validating::ORIENT_NORMAL, '/ZXY/', false],
+            [Examples\Validating::POINT_NORTH, NULL, true],
+            [Examples\Validating::ORIENT_NORMAL, NULL, true],
         ];
     }
 
