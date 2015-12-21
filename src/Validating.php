@@ -11,9 +11,10 @@ trait Validating
 
     /**
      * Check if the given value matches a constant that matches the given regular expression.
+     * Will match against all constants if no regexp given.
      *
-     * @param mixed  $value
-     * @param string $regexp
+     * @param mixed                  $value
+     * @param string|null [optional] $regexp
      *
      * @return bool
      */
