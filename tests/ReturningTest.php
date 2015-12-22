@@ -2,8 +2,6 @@
 
 namespace ConstHelpers\Tests;
 
-use ConstHelpers\Tests\Examples;
-
 class ReturningTest extends \PHPUnit_Framework_TestCase
 {
     public function testGetAll()
@@ -87,6 +85,28 @@ class ReturningTest extends \PHPUnit_Framework_TestCase
                 'ORIENT_INVERSE' => Examples\Returning::ORIENT_INVERSE,
             ]],
             ['X', []],
+        ];
+    }
+
+    /**
+     * @depends testGetAll
+     *
+     * @dataProvider providerTestGetNameFor
+     */
+    public function testGetNameFor($value, $string)
+    {
+        $this->assertEquals(
+            $string,
+            Examples\Returning::getNameFor($value)
+        );
+    }
+
+    public function providerTestGetNameFor()
+    {
+        return [
+            [2, 'POINT_EAST'],
+            [6, 'ORIENT_NORMAL'],
+            [-1, false],
         ];
     }
 }

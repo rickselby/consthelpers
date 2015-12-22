@@ -53,6 +53,24 @@ trait Returning
     }
 
     /**
+     * Get the name of a constant based on its value. If multiple constants have
+     * the same value, return false.
+     *
+     * @param mixed $value Value of the constant
+     *
+     * @return string|false
+     */
+    public static function getNameFor($value)
+    {
+        $names = array_keys(self::getConstList(), $value);
+        if (count($names) == 1) {
+            return $names[0];
+        } else {
+            return false;
+        }
+    }
+
+    /**
      * Populate the list of constants, if required, and return the list.
      *
      * @return mixed[] Array of all constants, keyed by name
